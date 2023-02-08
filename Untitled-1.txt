@@ -1,0 +1,15 @@
+ // deposit button even handler
+        const depositBtn = document.getElementById("addDeposit");
+        depositBtn.addEventListener("click", function(){
+           const depositAmount = document.getElementById("depositAmount").value;
+           const depositNumber = perseFloat(depositAmount);
+
+           const currentDeposit = document.getElementById("currentDeposit").innerText;
+           const currentDepositNumber = parseFloat(currentDeposit);
+           const totalDeposit = depositNumber + currentDepositNumber;
+           
+           
+           document.getElementById("currentDeposit").innerText = totalDeposit;
+           document.getElementById("depositAmount").value= "";
+
+        })
